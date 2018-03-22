@@ -17,7 +17,7 @@
     <typeAliases>
        <typeAlias alias="My_DB_VENDOR" type="com.geshaofeng.springbootmybatisdemo.mapping.MyVendorDatabaseIdProvider"></typeAlias>
         <!--mapper : resultmap.type-->
-        <typeAlias type="com.geshaofeng.springbootmybatisdemo.entity.User" alias="User"/>
+        <typeAlias type="com.geshaofeng.springbootmybatisdemo.entity1.UserEntity" alias="User"/>
     </typeAliases>
 
 
@@ -47,7 +47,7 @@
 
     <!--如果没有下面的配置：img/exception_1()-->
     <mappers>
-        <mapper resource="mybatis/mapper/UserMapper.xml"/>
+        <mapper resource="mybatis/mapper/UserEntityMapper.xml"/>
     </mappers>
 
 </configuration>
