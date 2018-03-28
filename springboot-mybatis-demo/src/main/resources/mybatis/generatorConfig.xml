@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!--
+    The <generatorConfiguration> Element Child Elements
+        <properties> (0 or 1)
+        <classPathEntry> (0..N)
+        <context> (1..N)
+-->
+<generatorConfiguration>
+
+    <!--
+      The <context>
+       Optional Attributes
+        targetRuntime:
+            This is the default value
+            With the value, MBG will generate objects that are compatible with MyBatis versions 3.0 and higher,
+            and JSE 5.0 and higher
+       Element Child Elements
+        <property> (0..N)
+        <plugin> (0..N)
+        <commentGenerator> (0 or 1)
+        <connectionFactory> (either connectionFactory or jdbcConnection is Required)
+        <jdbcConnection> (either connectionFactory or jdbcConnection is Required)
+        <javaTypeResolver> (0 or 1)
+        <javaModelGenerator> (1 Required)
+        <sqlMapGenerator> (0 or 1)
+        <javaClientGenerator> (0 or 1)
+        <table> (1..N)
+    -->
+    <context id="mysqlTables" targetRuntime="MyBatis3">
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/mybatis-demo?characterEncoding=utf-8&amp;useSSL=false" userId="root" password="123456"/>
+
+        <!--java模型生成器(发电机)
+        -->
+        <javaModelGenerator targetPackage="com.geshaofeng.springbootmybatisdemo.entity1" targetProject="${user.dir}/src/main/java"></javaModelGenerator>
+
+        <!--
+            The <sqlMapGenerator>
+                Supported Properties
+                    enableSubPackages:
+                        If this property is true, the generated SQL Map for the table will be placed in the package "com.mycompany.myschema".
+                        If the property is false, the generated SQL Map will be placed in the "com.mycompany" schema.
+                        The default value is false.
+        -->
+        <sqlMapGenerator targetPackage="mybatis.mapper" targetProject="${user.dir}/src/main/resources"/>
+
+        <!--
+            The <javaClientGenerator>
+                The Java client Generator builds Java interfaces and classes that allow easy use of the generated Java model and XML map file
+            
+        -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.geshaofeng.springbootmybatisdemo.mapper1" targetProject="${user.dir}/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!--
+            The <table>
+            Optional Attribute
+                if you specify foo.Bar then the domain object
+                will be Bar and package foo will be appended to the target package specified in the generator configurations.
+            Element Child Elements
+                <ignoreColumn> (0..N)
+                <generatedKey> (0 or 1)
+                <domainObjectRenamingRule> (0 or 1)
+                <columnRenamingRule> (0 or 1)
+                <columnOverride> (0..N)
+                <property> (0..N)
+                    Supported Properties:
+                        useActualColumnNames:
+                            false(default): MBG will attempt to camel case the returned names
+                            true:  then MBG will use column names
+                                    as returned from the database metadata
+                                    as the properties
+                                    of the generated domain objects
+
+                   Required Attributes:column
+                   optional attribute:
+                    property:
+                        有property：	The name of a Java property to be used(rename)
+                        无property：based on the value of the "useActualColumnNames" property (see the description of the [<table>]
+                                    (http://www.mybatis.org/generator/configreference/table.html)
+                                    element for more information)
+                   jdbcType:
+                        The JDBC Type (INTEGER, DECIMAL, NUMERIC, VARCHAR, etc.) for the column.
+                        This can be used to override the type calculated by the JavaTypeResolver if required.
+                        For some databases this is necessary to handle JDBC driver quirks (e.g. DB2's LONGVARCHAR type should be mapped to VARCHAR for iBATIS).
+
+        -->
+        <table tableName="user" domainObjectName="UserEntity" >
+            <property name="useActualColumnNames" value=""/>
+            <generatedKey column="id" sqlStatement="MYSQL" identity="true" />
+            <columnOverride column="username" />
+            <columnOverride column="password"/>
+            <columnOverride column="create_time"/>
+            <columnOverride column="update_time"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
