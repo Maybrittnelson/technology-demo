@@ -22,9 +22,9 @@
   * 定位到configuration.getMappedStatement(statement)，即**last**下一行。
 
   * ```java
-    //通过
-    //1.理解mappedStatements
-    //2.理解statement(id)的含义
+    //在[pdf](https://github.com/Maybrittnelson/technology-demo/tree/master/springboot-mybatis-demo/pdf)，中搜索selectOne，然后理解下面的1、2。
+    //1.mappedStatements的含义
+    //2.statement(id)的含义
     public class Configuration {
         
     protected final Map<String, MappedStatement> mappedStatements = new StrictMap<MappedStatement>("Mapped Statements collection");
@@ -76,7 +76,8 @@
 * 截取**last-catch**代码片段，观看1->3
 
 ```java
-  @Override
+  
+	@Override
   public <E> List<E> selectList(String statement, Object parameter, RowBounds rowBounds) {
     try {
       MappedStatement ms = configuration.getMappedStatement(statement);
