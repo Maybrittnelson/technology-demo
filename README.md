@@ -8,7 +8,7 @@
 
 #### 行者常至
 
-**运行对应分支上的代码，出现如上异常**
+**运行对应分支上的com.geshaofeng.springbootmybatisdemo.demo.MyBatisXmlConfigurationDemo.main()，出现如上异常**
 
 * 通过异常打印顺序可知
   * 调用方法顺序为：最先**first**，最后调用的是**last**
