@@ -11,8 +11,8 @@
         <result column="username" property="username"/>
         <result column="password" property="password"/>
         <!--javaType一一映射,可不配置-->
-        <result column="createTime" property="createTime" javaType="java.sql.Timestamp"/>
-        <result column="updateTime" property="updateTime"/>
+        <result column="createTime" property="createTime" typeHandler="com.geshaofeng.springbootmybatisdemo.handler.TimestampHandler"/>
+        <result column="updateTime" property="updateTime" typeHandler="com.geshaofeng.springbootmybatisdemo.handler.TimestampHandler"/>
     </resultMap>
 
 
