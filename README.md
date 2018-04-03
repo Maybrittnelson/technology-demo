@@ -23,7 +23,6 @@
   * 发现null可以向下转型。
 
     ​
-
 #### [MyBatis Generator](http://www.mybatis.org/generator/)
 
 * 需要使用如下标注的文件：
