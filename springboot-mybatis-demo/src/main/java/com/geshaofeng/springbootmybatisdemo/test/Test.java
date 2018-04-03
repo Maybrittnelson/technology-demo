@@ -9,7 +9,7 @@ public class Test {
 
     public static void main(String[] args) {
         //事实证明null也能向下转型
-        //MyTypeHandler cast = MyTypeHandler.class.cast(null);
+        MyTypeHandler cast = MyTypeHandler.class.cast(null);
 
         List<String> list = new ArrayList<String>();
         list.add("1");
