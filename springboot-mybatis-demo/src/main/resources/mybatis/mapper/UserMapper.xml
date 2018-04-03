@@ -11,12 +11,12 @@
         <result column="username" property="username"/>
         <result column="password" property="password"/>
         <!--javaType一一映射,可不配置-->
-        <result column="createTime" property="createTime" typeHandler="com.geshaofeng.springbootmybatisdemo.handler.TimestampHandler"/>
-        <result column="updateTime" property="updateTime" typeHandler="com.geshaofeng.springbootmybatisdemo.handler.TimestampHandler"/>
+        <result column="create_time" property="createTime" typeHandler="com.geshaofeng.springbootmybatisdemo.handler.TimestampHandler"/>
+        <result column="update_time" property="updateTime" typeHandler="com.geshaofeng.springbootmybatisdemo.handler.TimestampHandler"/>
     </resultMap>
 
 
     <select id="selectOneUser" parameterType="int" resultMap="usermap">
-        SELECT id,username,password FROM user WHERE id = #{id}
+        SELECT id,username,password, create_time, update_time FROM user WHERE id = #{id}
     </select>
 </mapper>

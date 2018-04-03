@@ -1,7 +1,5 @@
 package com.geshaofeng.springbootmybatisdemo.entity;
 
-import java.sql.Timestamp;
-
 
 public class User {
     private int id;
