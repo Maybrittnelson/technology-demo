@@ -8,7 +8,6 @@
 
 * [mybatis-3](http://www.mybatis.org/mybatis-3/)
 
-  ​
 
 ### [1-02 mybatis其他自践](https://github.com/Maybrittnelson/technology-demo/tree/featrue/1-02)
 
@@ -18,7 +17,6 @@
   * [The Video](https://www.youtube.com/watch?v=c45AevIuYGk)
 * **Integration**
   * [Spring Boot Starter doc](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
-
 
 
 ### [2-01 实现app单点登录](https://github.com/Maybrittnelson/technology-demo/tree/featrue/2-01)
