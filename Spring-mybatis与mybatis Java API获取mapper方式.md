@@ -80,5 +80,3 @@ There are three different ways to do it:
 
 ## org.apache.ibatis.session.Configuration#getMapper做了什么
 
-
-
