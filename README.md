@@ -1,49 +1,19 @@
-# technology-demo
+[TOC]
 
->1-01 的代码在分支 feature/1-01上，依次类推
->
->mybatis中切勿将mysql关键字，命名为表字段名称，例如desc
 
-### 1-02
 
-#### 修复1-01代码，添加自创TypeHandler
+## Mybatis相关问题
 
-* 需要使用如下标注的文件：
+###Round One
 
-<img src="https://github.com/Maybrittnelson/technology-demo/blob/featrue/1-02/springboot-mybatis-demo/img/xiufu1_handler.jpg?raw=true" width="80%" height="800px">
+####1 Mapper在spring管理下其实是单例，为什么可以是一个单例？ (而Mybatis中提示线程不安全)
 
-* 产生新的问题，org.apache.ibatis.type.BaseTypeHandler#setConfiguration并没有真正注入congiguration
+答：因为根据Mapper接口，动态代理生成的Mapper代理类，该类执行方法时，调用代理方法，接着SqlSession中调用curd方法。此时区别产生：spring中的SqlSessionTemplate，调用org.mybatis.spring.SqlSessionTemplate.SqlSessionInterceptor#invoke，获取线程级别单例的DefaultSqlSession实例。而mybatis javaApi操作，直接调用DefaultSqlSession实例方法会出错。
 
-  * [issues](https://github.com/mybatis/mybatis-3/issues/1203)
+##### 扩展题：那Spring为什么不用SqlSessionManager
 
-  * [fix](https://github.com/kazuki43zoo/mybatis-3/commit/18e0ed3f29cc91c3daa7579b9523a98018a5d47d)
+spring中SqlSessionTemplate用的SqlSessionFactory包装的key，可以更细粒度的区分SqlSession，而SqlSessionManagerThreadLocal绑定的只是SqlSession。
 
-  * 学着[fix](https://github.com/kazuki43zoo/mybatis-3/commit/18e0ed3f29cc91c3daa7579b9523a98018a5d47d)抄了一段代码，在package com.geshaofeng.springbootmybatisdemo.test。
+#### 2 TypeHandler手写
 
-  * 发现null可以向下转型。
-
-    ​
-#### [MyBatis Generator](http://www.mybatis.org/generator/)
-
-* 需要使用如下标注的文件：
-
-  <img src="https://github.com/Maybrittnelson/technology-demo/blob/featrue/1-02/springboot-mybatis-demo/img/generator_order.jpg?raw=true" width="80%" height="800px">
-
-   * 1为自动生成前所需配置文件
-
-   * 2为自动生成的文件
-
-   * 3为使用自动生成文件的文件
-
-     ​
-
-#### [MyBatis Spring Boot 整合](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
-
-* 需要使用如下标注的文件：
-
-  <img src="https://github.com/Maybrittnelson/technology-demo/blob/featrue/1-02/springboot-mybatis-demo/img/sqlSessionTemplate_order.jpg?raw=true" width="80%" height="800px">
-
-  	* 阅读顺序：1->6
-
-  ​
-
+####3手写Plugin,多个interceptor到底谁先执行？顺序由谁决定的？ 
