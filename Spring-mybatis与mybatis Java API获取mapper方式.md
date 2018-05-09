@@ -78,6 +78,6 @@ There are three different ways to do it:
 
 # 以上几种获取方式其实都是 org.apache.ibatis.session.Configuration#getMapper
 
-## org.apache.ibatis.session.Configuration#getMapper做了什么
-<img src="https://raw.githubusercontent.com/Maybrittnelson/technology-demo/master/springboot-mybatis-demo/img/exception.jpg" width="80%">
+## org.apache.ibatis.session.Configuration#getMapper做了什么,
+<img src="https://github.com/Maybrittnelson/technology-demo/blob/feature/1-03/img/DeafaultSqlSession%20%E8%8E%B7%E5%8F%96%20Mapper%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E7%B1%BB%E7%9A%84%E6%97%B6%E5%BA%8F%E5%9B%BE.png" width="80%">
 
