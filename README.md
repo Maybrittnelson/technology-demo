@@ -17,5 +17,7 @@
 spring中SqlSessionTemplate用的SqlSessionFactory包装的key，可以更细粒度的区分SqlSession，而SqlSessionManagerThreadLocal绑定的只是SqlSession。
 
 #### 2 TypeHandler手写
+##### 答
+[代码](https://github.com/Maybrittnelson/technology-demo/blob/featrue/1-02/README.md)
 
 #### 3手写Plugin,多个interceptor到底谁先执行？顺序由谁决定的？ 
