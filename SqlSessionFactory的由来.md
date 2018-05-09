@@ -4,7 +4,7 @@
 
 # SqlSessionFactory的由来问题
 
-##[问题由来节选](http://www.mybatis.org/spring/getting-started.html#)
+## [问题由来节选](http://www.mybatis.org/spring/getting-started.html#)
 
 ### Getting Started
 
