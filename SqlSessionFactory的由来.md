@@ -34,6 +34,8 @@ org.mybatis.spring.support.SqlSessionDaoSupport#setSqlSessionFactory(SqlSessionF
 1. sqlSessionFactory //Find Usages /value wrirte
 2. 在org.mybatis.spring.SqlSessionFactoryBean#afterPropertiesSet打断点启动，
 3. 哈哈进来了
+## 代码时序图
+<img src="https://github.com/Maybrittnelson/technology-demo/blob/feature/1-03/img/SqlSessionFactoryBean%20%E4%BA%A7%E7%94%9F%20SqlSessionFacory%E7%9A%84%E6%97%B6%E5%BA%8F%E5%9B%BE.png"/>
 
 ## 问题之外
 
