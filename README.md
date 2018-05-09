@@ -16,4 +16,4 @@ spring中SqlSessionTemplate用的SqlSessionFactory包装的key，可以更细粒
 
 #### 2 TypeHandler手写
 
-####3手写Plugin,多个interceptor到底谁先执行？顺序由谁决定的？ 
+#### 3手写Plugin,多个interceptor到底谁先执行？顺序由谁决定的？ 
