@@ -79,4 +79,5 @@ There are three different ways to do it:
 # 以上几种获取方式其实都是 org.apache.ibatis.session.Configuration#getMapper
 
 ## org.apache.ibatis.session.Configuration#getMapper做了什么
+<img src="https://raw.githubusercontent.com/Maybrittnelson/technology-demo/master/springboot-mybatis-demo/img/exception.jpg" width="80%">
 
