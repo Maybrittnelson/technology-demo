@@ -1,23 +1,19 @@
-# technology-demo
-
->1-01 的代码在分支 feature/1-01上，依次类推
->
->mybatis中切勿将mysql关键字，命名为表字段名称，例如desc
-
-### [1-01 mybatis-3自践](https://github.com/Maybrittnelson/technology-demo/tree/featrue/1-01)
-
-* [mybatis-3](http://www.mybatis.org/mybatis-3/)
+[TOC]
 
 
-### [1-02 mybatis其他自践](https://github.com/Maybrittnelson/technology-demo/tree/featrue/1-02)
 
-* **Products**
-  * [Generator doc](http://www.mybatis.org/generator/)
-  * [Migrations doc](http://www.mybatis.org/migrations/)
-  * [The Video](https://www.youtube.com/watch?v=c45AevIuYGk)
-* **Integration**
-  * [Spring Boot Starter doc](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
+## Mybatis相关问题
 
+###Round One
 
-### [2-01 实现app单点登录](https://github.com/Maybrittnelson/technology-demo/tree/featrue/2-01)
+####1 Mapper在spring管理下其实是单例，为什么可以是一个单例？ (而Mybatis中提示线程不安全)
 
+答：因为根据Mapper接口，动态代理生成的Mapper代理类，该类执行方法时，调用代理方法，接着SqlSession中调用curd方法。此时区别产生：spring中的SqlSessionTemplate，调用org.mybatis.spring.SqlSessionTemplate.SqlSessionInterceptor#invoke，获取线程级别单例的DefaultSqlSession实例。而mybatis javaApi操作，直接调用DefaultSqlSession实例方法会出错。
+
+##### 扩展题：那Spring为什么不用SqlSessionManager
+
+spring中SqlSessionTemplate用的SqlSessionFactory包装的key，可以更细粒度的区分SqlSession，而SqlSessionManagerThreadLocal绑定的只是SqlSession。
+
+#### 2 TypeHandler手写
+
+####3手写Plugin,多个interceptor到底谁先执行？顺序由谁决定的？ 
