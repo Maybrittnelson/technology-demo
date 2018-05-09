@@ -12,7 +12,7 @@
 
 <img src="https://github.com/Maybrittnelson/technology-demo/blob/featrue/1-02/springboot-mybatis-demo/img/xiufu1_handler.jpg?raw=true" width="80%" height="800px">
 
-* 产生新的问题，org.apache.ibatis.type.BaseTypeHandler#setConfiguration并没有真正注入congiguration
+* 产生新的问题，org.apache.ibatis.type.BaseTypeHandler#setConfiguration并没有真正注入configuration
 
   * [issues](https://github.com/mybatis/mybatis-3/issues/1203)
 
