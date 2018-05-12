@@ -1,7 +1,0 @@
-server:
-  port: 8081
-  context-path: /server
-#用户登录密码
-security:
-  user:
-    password: 111111
