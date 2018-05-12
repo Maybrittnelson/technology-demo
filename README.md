@@ -1,1 +1,1 @@
-# technology-demo
+# spring-demo
