@@ -2,17 +2,17 @@
 
 # spring-demo
 
-### Spring-conainer-demo
+### [Spring-container-demo](https://github.com/Maybrittnelson/technology-demo/tree/feature/3-01/Spring/spring-container)
 
-### Spring-aop-demo
+### [Spring-aop-demo](https://github.com/Maybrittnelson/technology-demo/tree/feature/3-01/Spring/spring-aop)
 
-### Spring-data-demo
+### [Spring-data-demo](https://github.com/Maybrittnelson/technology-demo/tree/feature/3-01/Spring/spring-data)
 
-### Spring-template-demo
+### [Spring-template-demo](https://github.com/Maybrittnelson/technology-demo/tree/feature/3-01/Spring/spring-template)
 
-#### Freemarker-demo
+#### [Freemarker-demo](https://github.com/Maybrittnelson/technology-demo/tree/feature/3-01/Spring/freemarker)
 
-### Spring-web-demo
+### [Spring-web-demo](https://github.com/Maybrittnelson/technology-demo/tree/feature/3-01/Spring/spring-web)
 
 
 
