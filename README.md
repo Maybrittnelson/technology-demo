@@ -8,5 +8,11 @@
 
 ## 7种比较排序
 
-### [堆排序](https://github.com/Maybrittnelson/technology-demo/tree/feature/6-01/img/sort/heap/1%20%E6%9E%9A%E4%B8%BE%E8%BF%87%E7%A8%8B)
+### [插入排序](https://github.com/Maybrittnelson/technology-demo/tree/feature/6-01/img/sort/insert)
+
+### [归并排序](https://github.com/Maybrittnelson/technology-demo/tree/feature/6-01/img/sort/merger)
+
+### [快速排序](https://github.com/Maybrittnelson/technology-demo/tree/feature/6-01/img/sort/quick)
+
+### [堆排序](https://github.com/Maybrittnelson/technology-demo/tree/feature/6-01/img/sort/heap)
 
