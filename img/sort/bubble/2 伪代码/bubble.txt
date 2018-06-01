@@ -1,0 +1,4 @@
+for l = n-1 downto 1
+	for i = 1 to l
+		if A[i-1] > A[i]
+			exchange A[i-1] with A[i]
