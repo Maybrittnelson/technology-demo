@@ -22,7 +22,7 @@ n：数组长度
 
 ### [选择排序](https://github.com/Maybrittnelson/technology-demo/tree/feature/6-01/img/sort/selection)
 
-- A[i]与A[i+1]...A[n-1]，依次比较，将最小的放前面A[i]。(0<=i<n-1)。
+- A[i]与A[i+1]...A[n-1]，依次比较，将最小的放前面A[i]。(0<=i<n-1)
 
 ### [归并排序](https://github.com/Maybrittnelson/technology-demo/tree/feature/6-01/img/sort/merger)
 
