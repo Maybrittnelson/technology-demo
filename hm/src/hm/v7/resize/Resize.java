@@ -9,5 +9,12 @@ package hm.v7.resize;
  */
 public class Resize {
 
+    public static void main(String[] args) {
+        try{
 
+        }catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }
 }

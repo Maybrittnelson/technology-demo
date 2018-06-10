@@ -6,7 +6,7 @@ import java.util.HashMap;
  * 1.8
  *
  * @author <a href="mailto:ge.sf.chn@gmail.com">shaofeng</a>
- * @see HashMap#putVal(int, java.lang.Object, java.lang.Object, boolean, boolean)
+ * @see HashMap#putVal(int, Object, Object, boolean, boolean)
  * @since 2018/5/22
  */
 public class Put {

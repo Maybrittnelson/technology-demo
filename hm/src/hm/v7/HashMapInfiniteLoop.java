@@ -39,7 +39,7 @@ public class HashMapInfiniteLoop {
             ;
         }.start();
 
-        String s = map.get(3);//01111
+        String s = map.get(11);//01111
         System.out.println(s);
     }
 }
