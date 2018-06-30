@@ -41,7 +41,7 @@
 
 ## 6 图解算法
 
-### [6-01 7种比较排序](https://github.com/Maybrittnelson/technology-demo/blob/feature/6-01/README.md)
+### [6-01 7种比较排序](https://github.com/Maybrittnelson/technology-demo/tree/feature/6-01)
 
 
 
