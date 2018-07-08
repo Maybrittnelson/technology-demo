@@ -1,7 +1,0 @@
-for i = 1 to n-1
-	ce = A[i] //ce 当前数组中需要找位置的元素
-	pre = i - 1
-		while pre > 0 and A[pre] > ce
-			A[pre+1] = A[pre];
-			pre--;
-	A[pre+1] = ce;
