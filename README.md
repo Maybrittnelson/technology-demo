@@ -43,6 +43,8 @@
 
 ### [6-01 7种比较排序](https://github.com/Maybrittnelson/technology-demo/tree/feature/6-01)
 
+## 7 碎片化阅读
 
+### [7-01 极客时间#Java核心技术36讲](https://github.com/Maybrittnelson/technology-demo/tree/feture/7-01)
 
 
